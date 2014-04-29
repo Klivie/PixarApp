@@ -10,8 +10,8 @@ Key Functionality
 -----------------
 
 
-..* User-friendly
-..* Information heavy
-..* Review System
+* User-friendly
+* Information heavy
+* Review System
 
 If you have any other queries or would like to view more detailed descriptions please visit our project [wiki](https://githun.com/MatthewWhitworth/PixarApp/wiki).

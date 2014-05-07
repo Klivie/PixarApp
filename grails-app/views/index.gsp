@@ -3,6 +3,7 @@
 	<head>
 		<meta name="layout" content="main"/>
 		<title>Welcome to Grails</title>
+<<<<<<< HEAD
 		<style type="text/css" media="screen">
 			#status {
 				background-color: #eee;
@@ -118,5 +119,11 @@
 				</ul>
 			</div>
 		</div>
+=======
+		
+	</head>
+	<body>
+		<h1>Pixar App!</h1>
+>>>>>>> 242ce56ab28acbeb810cfe697e7998e8b64a6629
 	</body>
 </html>

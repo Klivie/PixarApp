@@ -5,17 +5,17 @@ package uk.ac.shu.webarch.PixarApp
 class Actor {
 
 	String actorName
-	int actorAge=1
+	Integer actorAge
 	String  actorBio
 	
 	/* A set displaying a number of films the actor/actress has appeared in */
-	set actorFilms 
+	Set actors 
 
-    /* The hasMany property telling the framework that actorFilms is just the instances of actorFilm so it knows to link to the filmActor table */
-    static hasMany = [actorFilms : filmActor]
+    /* The hasMany property telling the framework that actors is just the instances of actors in the filmActor table so it knows to link to the filmActor table */
+    static hasMany = [actors: FilmActor]
 
-    /* The mappedBy property tells the framework that the property name in the filmActor table is actorFilms */
-    static mappedBy = [actorFilms : 'actorFilms']
+    /* The mappedBy property tells the framework that the actors property name in the filmActor table is actorFilms */
+    static mappedBy = [actors: 'actorsFilm']
 
     /* Constaint to set actorName to a non nullable field */
     static constraints = {

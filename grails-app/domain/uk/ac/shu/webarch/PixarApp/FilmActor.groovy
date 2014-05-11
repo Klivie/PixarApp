@@ -8,7 +8,7 @@ class FilmActor {
 	Film filmActors
 
 	/* The id for the actor, pulled from the Actor table */
- 	Actor actorFilms
+ 	Actor actorsFilm
 
 	String filmCharacterPlayed
 	
@@ -21,7 +21,7 @@ class FilmActor {
     static mapping = {
     table 'film_actor'
     filmActors column: 'film_fk'
-    actorFilms column: 'actor_fk'
+    actorsFilm column: 'actor_fk'
     filmCharacterPlayed column: 'character_played'
     }
 }

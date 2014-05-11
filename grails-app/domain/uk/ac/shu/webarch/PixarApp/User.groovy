@@ -15,11 +15,11 @@ class User {
 
 	/* Here we want to show the set of reviews that are associated with this user, */
 
-	set reviews
+	Set reviews
 
 	/* Telling the framework that reviews is actually the instances of Review, which makes the framework realise it must join to the Review class, */	
 
-    static hasMany = [reviews: review]
+    static hasMany = [reviews: Review]
 	
 	/* Here we tell the framework that the other side of this association is the userReviews property within the Review class. */
 	
@@ -28,10 +28,10 @@ class User {
 	/* The constraints set on the class saying that the username userpassword, and userEmail fields cannot be null, along with a max length for each. Age field has been set a minimum value of 0 and a maximum of 130. */
 
     static constraints = {
-	username (blank: false, nullable: false, maxSize:100);
-        userpassword (blank: false, nullable: false, maxSize:50);
+	username (blank: false, nullable: false, maxSize:100, unique: true);
+        userPassword (blank: false, nullable: false);
         userEmail (blank: false, nullable: false, maxSize:100);
-	userAge (min: 0, max: 130, maxLength:3);
+	userAge (min: 0, max: 130);
     }
 
     /* the mapping property used to change the way the field names are displayed in sql. */

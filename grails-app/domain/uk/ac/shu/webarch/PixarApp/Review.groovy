@@ -10,12 +10,12 @@ class Review {
 	/* The film id pulled from the film id */
 	Film filmReviews
 
-	int ratingOutOf5 = 1
+	Integer rating
 	String notes
 
     /* Constraint just to set the rating given to a no nullable field which has to be between 1-5 */
     static constraints = {
-	RatingOutOf5(nullable:false, blank:false, min:1, max:5, maxLength:1);
+	rating(nullable:false, blank:false, min:0, max:5);
     }
 
     /* Changing the display names of the fields, as well as changing the text type of the notes column to LOB text */
@@ -23,7 +23,7 @@ class Review {
     table 'review'
     userReviews column: 'user_fk'
     filmReviews column: 'film_fk'
-    ratingOutOf5 column: 'film_rating_out_of_5'
+    rating column: 'film_rating_out_of_5'
     notes column: 'notes', type: 'text'
     }
 }

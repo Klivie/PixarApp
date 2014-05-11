@@ -5,16 +5,16 @@ package uk.ac.shu.webarch.PixarApp
 class Director {
 
 	String directorName
-	int directorAge=1
+	Integer directorAge
 	String notes
 
 	/* This is the set of films that this director has directed */
 
-	set films
+	Set films
     
     /* The hasMany property which tells the framework that films is just a set of film instances which teaches the framework to link to the film table */
 
-    static hasMany = [films: film]
+    static hasMany = [films: Film]
 
     /* The mappedBy propety allows us to tell the framework that the property at the other side of the relationship is filmDirector of the film class */
 

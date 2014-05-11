@@ -17,22 +17,22 @@ class Film {
 	Studio filmStudio
 
 	/* The set of actors that are in this film */
-	set filmActors
+	Set filmActors
 
 	/* The reviews which have been written about the film by users */
-	set filmReviews
+	Set filmReviews
     
     /* Here we tell the framework that the actor property is a set of filmActor instances, the framework then knows that it must join to the filmActor table. This domain class has many sets, we also need to display the set of review instances and we do this so the framework joins to the review table. Because of this the hasMany data will specify these different sets */
 
     static hasMany = [
-	actors : FilmActor,
+	filmActors : FilmActor,
 	filmReviews : Review
     ]
 
     /* This tells us what the property at the other side of the relationship is named */
 
     static mappedBy = [
-	actors: 'filmActors'
+	filmActors: 'filmActors',
 	filmReviews: 'filmReviews'
     ]
 
@@ -47,9 +47,9 @@ class Film {
 	filmDirector column: 'director_fk'
 	filmStudio column: 'studio_fk'
 	filmName: 'film_name'
-	filmDescription column 'film_description', type: 'text'
-	filmGenre column 'film_genre'
-	filmLength column 'film_length'
-	releaseDate column 'release_date
+	filmDescription column: 'film_description', type: 'text'
+	filmGenre column: 'film_genre'
+	filmLength column: 'film_length'
+	releaseDate column: 'release_date'
     }
 }

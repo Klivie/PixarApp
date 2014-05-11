@@ -5,12 +5,12 @@ package uk.ac.shu.webarch.PixarApp
 class Studio {
 
 	String studioName
-	int studioYearFounded
+	Integer studioYearFounded
 	String studioHistory
 
 	/* The set of films this studio has made. We use set instead of list because the order does not matter. */
 
-	set films
+	Set films
 
     /* Constraint setting studioName as a required field and a max length of 256 */
 
@@ -20,7 +20,7 @@ class Studio {
 
     /* a hasMany property telling the framework that the set of films is just a set of film instances, the table now knows to join to the film table */
 
-    static hasMany = [films: film]
+    static hasMany = [films: Film]
 
     /* The mappedBy propety tells the framework that the property at the other side of the relationship is film, it tells the framework that the set "films" is to show the film instances where filmStudio is this. */
 

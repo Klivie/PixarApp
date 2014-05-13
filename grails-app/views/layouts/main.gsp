@@ -23,7 +23,7 @@
 		<div id="header">
 		<div id="logo">Pixar</div>
 		<ul class ="navbar">
-		<li><g:createLink="${createLink(uri: '/')}">Home</g:link></li>
+		<li><g:link>Home</g:link></li>
 		<li><g:link controller="Film">Films</g:link></li>
 		<li><g:link controller="Actor">Actors</g:link></li>
 		<li><g:link controller="User">Users</g:link></li>		

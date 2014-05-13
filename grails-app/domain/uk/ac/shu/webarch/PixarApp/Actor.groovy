@@ -9,13 +9,13 @@ class Actor {
 	String  actorBio
 	
 	/* A set displaying a number of films the actor/actress has appeared in */
-	Set actors 
+	Set films 
 
-    /* The hasMany property telling the framework that actors is just the instances of actors in the filmActor table so it knows to link to the filmActor table */
-    static hasMany = [actors: FilmActor]
+    /* The hasMany property telling the framework that films is just the instances of films in the filmActor table so it knows to link to the filmActor table */
+    static hasMany = [films: FilmActor]
 
     /* The mappedBy property tells the framework that the actors property name in the filmActor table is actorFilms */
-    static mappedBy = [actors: 'actorsFilm']
+    static mappedBy = [films: 'actorsFilm']
 
     /* Constaint to set actorName to a non nullable field */
     static constraints = {

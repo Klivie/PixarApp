@@ -21,19 +21,31 @@
 			<div class="row">
 			<div class="img-link">
 				<div>
-				<g:img dir="images" file="pixar.jpg" />			
+				<g:img dir="images" file="pixar.jpg" />
+				<div class="img-link-text">
+				<p>Come look at the different films we have listed and the reviews for each!</p>
+				<g:link controller="Film" class="">Browse Films Here >></g:link>
+				</div>			
 				</div>
 			</div>
 
 			<div class="img-link">
 				<div>
-				<g:img dir="images" file="toystory3.jpg" />			
+				<g:img dir="images" file="toystory3.jpg" />
+				<div class="img-link-text">
+				<p>Look at the actors we have stored and what films they appear in!</p>
+				<g:link controller="Actor" class="">Browse Actors Here >></g:link>
+				</div>			
 				</div>
 			</div>
 
 			<div class="img-link">
 				<div>
-				<g:img dir="images" file="findingnemo.jpg" />			
+				<g:img dir="images" file="findingnemo.jpg" />	
+				<div class="img-link-text">
+				<p>Browse the users we have and look at what they're reviews!</p>
+				<g:link controller="User" class="">Browse Users Here >></g:link>
+				</div>		
 				</div>
 			</div>
 			</div>

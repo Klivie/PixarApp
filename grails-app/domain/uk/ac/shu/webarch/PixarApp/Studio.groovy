@@ -6,7 +6,7 @@ class Studio {
 
 	String studioName
 	Integer studioYearFounded
-	String studioHistory
+	String studioAbout
 
 	/* The set of films this studio has made. We use set instead of list because the order does not matter. */
 
@@ -32,6 +32,6 @@ class Studio {
     table 'studio'
     studioName column: 'studio_name'
     studioYearFounded column: 'year_founded'
-    studioHistory column: 'studio_history', type:'text'
+    studioAbout column: 'studio_about', type:'text'
     }
 }

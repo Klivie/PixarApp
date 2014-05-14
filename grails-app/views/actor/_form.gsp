@@ -26,15 +26,15 @@
 	<g:textField name="actorBio" value="${actorInstance?.actorBio}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: actorInstance, field: 'actors', 'error')} ">
-	<label for="actors">
-		<g:message code="actor.actors.label" default="Actors" />
+<div class="fieldcontain ${hasErrors(bean: actorInstance, field: 'films', 'error')} ">
+	<label for="films">
+		<g:message code="actor.films.label" default="Films" />
 		
 	</label>
 	
 <ul class="one-to-many">
-<g:each in="${actorInstance?.actors?}" var="a">
-    <li><g:link controller="filmActor" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></li>
+<g:each in="${actorInstance?.films?}" var="f">
+    <li><g:link controller="filmActor" action="show" id="${f.id}">${f?.encodeAsHTML()}</g:link></li>
 </g:each>
 <li class="add">
 <g:link controller="filmActor" action="create" params="['actor.id': actorInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'filmActor.label', default: 'FilmActor')])}</g:link>
